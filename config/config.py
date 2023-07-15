@@ -2,7 +2,12 @@ import os
 from dotenv import load_dotenv
 
 
-__ENV_FILES = {"dev": ".env.dev", "dockerdev": ".env.dockerdev"}
+__ENV_FILES = {
+    "dev": ".env.dev",
+    "dockerdev": ".env.dockerdev",
+    "prod": ".env.prod",
+    "dockerprod": ".env.dockerprod",
+}
 
 
 # loads env variables based on current ENV
@@ -12,4 +17,3 @@ def load_env_var():
     env_file = __ENV_FILES[env]
     load_dotenv(os.path.join(file_path, env_file))
     print(f"ENV = {env}")
-
