@@ -1,0 +1,13 @@
+syntax = "proto3";
+
+service User {
+    rpc AuthenticateUser(AuthenticateUserRequest) returns (AuthenticateUserResponse) {};
+}
+
+message AuthenticateUserRequest {
+    string firebase_id_token = 1;
+}
+
+message AuthenticateUserResponse {
+    string uid = 1;
+}
