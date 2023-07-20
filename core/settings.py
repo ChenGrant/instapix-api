@@ -32,7 +32,6 @@ SECRET_KEY = os.environ["SECRET_KEY"]
 DEBUG = os.environ["DEBUG"] == "TRUE"
 
 ALLOWED_HOSTS = os.environ['ALLOWED_HOSTS'].split(',')
-print(ALLOWED_HOSTS)
 
 CORS_ALLOW_ALL_ORIGINS = os.environ["CORS_ALLOW_ALL_ORIGINS"] == "TRUE"
 

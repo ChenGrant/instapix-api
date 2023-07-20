@@ -4,6 +4,6 @@ services:
     build: .
     container_name: instapix-api
     environment:
-      - ENV=dockerdev
+      - ENV=prod
     ports:
       - 8000:8000

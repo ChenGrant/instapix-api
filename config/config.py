@@ -4,9 +4,7 @@ from dotenv import load_dotenv
 
 __ENV_FILES = {
     "dev": ".env.dev",
-    "dockerdev": ".env.dockerdev",
     "prod": ".env.prod",
-    "dockerprod": ".env.dockerprod",
 }
 
 
