@@ -1,5 +1,7 @@
-.api_venv
+.venv
 __pycache__
 .env.dev
 .env.prod
 deploy.sh
+private_key.key
+ssl_certificate.cer

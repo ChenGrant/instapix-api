@@ -31,7 +31,7 @@ SECRET_KEY = os.environ["SECRET_KEY"]
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = os.environ["DEBUG"] == "TRUE"
 
-ALLOWED_HOSTS = os.environ['ALLOWED_HOSTS'].split(',')
+ALLOWED_HOSTS = os.environ["ALLOWED_HOSTS"].split(",")
 
 CORS_ALLOW_ALL_ORIGINS = os.environ["CORS_ALLOW_ALL_ORIGINS"] == "TRUE"
 
@@ -48,6 +48,7 @@ INSTALLED_APPS = [
     "rest_framework",
     "gateway.apps.GatewayConfig",
     "corsheaders",
+    "sslserver",
 ]
 
 MIDDLEWARE = [
@@ -124,7 +125,6 @@ USE_I18N = True
 
 USE_TZ = True
 
-
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
 
@@ -134,3 +134,5 @@ STATIC_URL = "static/"
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
+
+SECURE_PROXY_SSL_HEADER = ("HTTP_X_FORWARDED_PROTO", "https")
